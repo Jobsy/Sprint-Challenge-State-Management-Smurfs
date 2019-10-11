@@ -1,6 +1,6 @@
+
 import axios from 'axios';
 import * as types from "./actionTypes";
-
 
 
 export function increment() {
@@ -21,13 +21,11 @@ export function reset() {
   }
 }
 
-
 export const getSmurf = () => dispatch => {
   dispatch({ type: types.FETCH_SMURF_START });
   axios
     .get('http://localhost:3333/smurfs')
     .then(res =>
-      // console.log("tttt: ", res)
       dispatch({ type: types.FETCH_SMURF_SUCCESS, payload: res.data })
     )
     .catch(err => dispatch({ type: types.FETCH_SMURF_FAIL, payload: err }));
@@ -42,6 +40,6 @@ export const postSmurf = (newSmurf) => dispatch => {
       // console.log("tttt: ", res)
       dispatch({ type: types.POST_SMURF_SUCCESS, payload: newSmurf })
     )
-    // .catch(err => dispatch({ type: types.POST_SMURF_FAIL, payload: err }));
+    .catch(err => dispatch({ type: types.POST_SMURF_FAIL, payload: err }));
 };
 

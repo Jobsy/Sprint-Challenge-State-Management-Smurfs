@@ -1,7 +1,9 @@
+
 import React from "react"
 import { connect } from "react-redux"
 
 import * as actionCreators from "../states/actionCreators";
+
 
 export function Counter(props) {
   const { count, increment, decrement, reset } = props;
@@ -14,7 +16,6 @@ export function Counter(props) {
     </div>
   );
 }
-
 
 export default connect(
   state => state,

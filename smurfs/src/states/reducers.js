@@ -1,3 +1,4 @@
+
 import * as types from "./actionTypes";
 
 
@@ -28,7 +29,7 @@ const initialState = {
 };
 
 export function reducer(state = initialState, action) {
-  // console.log('reducer', action);
+
   switch (action.type) {
     case types.FETCH_SMURF_START:
       return {
@@ -43,13 +44,13 @@ export function reducer(state = initialState, action) {
         isFetching: false,
         error: ''
       };
-      case types.POST_SMURF_SUCCESS:
-          return {
-            ...state,
-            smurfs: state.smurfs.concat(action.payload),
-            isFetching: false,
-            error: ''
-          };
+    case types.POST_SMURF_SUCCESS:
+      return {
+        ...state,
+        smurfs: state.smurfs.concat(action.payload),
+        isFetching: false,
+        error: ''
+      };
     case types.FETCH_SMURF_FAIL:
       return {
         ...state,
@@ -67,8 +68,8 @@ const initialState2 = {
   "age": "",
   "height": ""
 };
+
 export function reducer2(state = initialState2, action) {
-  // console.log('reducer', action);
   switch (action.type) {
     case types.POST_SMURF_SUCCESS:
       return {
@@ -91,9 +92,9 @@ export function reducer2(state = initialState2, action) {
     //   return {
     //     ...state,
     //     error: action.payload
-  // };
+    // };
     default:
-  return state;
-}
+      return state;
+  }
 }
 
