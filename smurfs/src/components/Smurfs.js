@@ -23,7 +23,7 @@ export function Smurfs(props) {
             {props.rootReducer.smurf.map(smurf => (
               <h4 key={smurf.url}>{smurf.name}</h4>
             ))}
-          </div>
+          </div> 
           {props.error && <p className="error">{props.rootReducer.error}</p>}
           <button onClick={props.fetchSmurf}>Fetch Smurf!</button>
         </>
