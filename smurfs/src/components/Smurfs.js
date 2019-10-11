@@ -18,7 +18,7 @@ export function Smurfs(props) {
         <>
           <h2>Welcome to Smurfs World!</h2>
           {console.log("ppp: ", props)}
-          {props.rootReducer.isFetching && <p>Fetching your Pokémon</p>}
+          {props.rootReducer.isFetching && <p>Fetching your Smurfs</p>}
           <div>
             {props.rootReducer.smurfs.map(smurf => (
               <h4 key={smurf.url}>

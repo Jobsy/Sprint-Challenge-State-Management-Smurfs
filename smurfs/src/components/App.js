@@ -7,7 +7,7 @@ import './App.css';
 import Counter from '../components/Counter';
 import Smurfs from '../components/Smurfs';
 import * as reducers from '../states/reducers';
-// import { Smurfs } from "./Smurfs";
+import PostSmurfs from "./PostSmurfs";
 
 
 function App() {
@@ -16,6 +16,8 @@ function App() {
   const monsterReducer = combineReducers({
     count: reducers.counterReducer,
     rootReducer: reducers.reducer,
+    rootReducer2: reducers.reducer2,
+
   });
 
   const store = createStore(
@@ -36,6 +38,9 @@ function App() {
         <div>Have fun!</div>
         <Counter />
         <Smurfs />
+        {/* <PostForm /> */}
+        {/* <Form /> */}
+        <PostSmurfs />
       </div>
     </Provider>
   );
