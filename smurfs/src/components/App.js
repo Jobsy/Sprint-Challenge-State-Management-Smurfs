@@ -5,7 +5,9 @@ import { Provider } from "react-redux"
 
 import './App.css';
 import Counter from '../components/Counter';
+import Smurfs from '../components/Smurfs';
 import * as reducers from '../states/reducers';
+// import { Smurfs } from "./Smurfs";
 
 
 function App() {
@@ -13,8 +15,7 @@ function App() {
 
   const monsterReducer = combineReducers({
     count: reducers.counterReducer,
-    // dog: reducers.dogsReducer
-    // rootReducer: reducers.reducer,
+    rootReducer: reducers.reducer,
   });
 
   const store = createStore(
@@ -34,6 +35,7 @@ function App() {
         <div>Start inside of your `src/index.js` file!</div>
         <div>Have fun!</div>
         <Counter />
+        <Smurfs />
       </div>
     </Provider>
   );

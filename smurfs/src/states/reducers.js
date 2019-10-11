@@ -22,18 +22,11 @@ export function counterReducer(count = initialValueCount, action) {
 
 
 const initialState = {
-    pokemon: [],
+    smurfs: [],
     error: '',
     isFetching: false
   };
-  let initialState = 
-    {
-      name: 'Brainey',
-      age: 200,
-      height: '5cm',
-      id: 0
-    };
-  
+   
   export function reducer(state = initialState, action) {
     // console.log('reducer', action);
     switch (action.type) {
@@ -46,7 +39,7 @@ const initialState = {
       case types.FETCH_SMURF_SUCCESS:
         return {
           ...state,
-          pokemon: action.payload,
+          smurfs: action.payload,
           isFetching: false,
           error: ''
         };

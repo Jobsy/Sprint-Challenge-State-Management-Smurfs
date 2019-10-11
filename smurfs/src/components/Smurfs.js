@@ -16,12 +16,16 @@ export function Smurfs(props) {
     }, []);
     return (
         <>
-          <h2>Welcome to Pokémon World!</h2>
+          <h2>Welcome to Smurfs World!</h2>
           {console.log("ppp: ", props)}
           {props.rootReducer.isFetching && <p>Fetching your Pokémon</p>}
           <div>
-            {props.rootReducer.smurf.map(smurf => (
-              <h4 key={smurf.url}>{smurf.name}</h4>
+            {props.rootReducer.smurfs.map(smurf => (
+              <h4 key={smurf.url}>
+              Smurf Name: {smurf.name} <br/>
+              {smurf.name} is {smurf.age} year old<br/>
+              {smurf.name} has a height {smurf.height}<br/>
+              </h4>
             ))}
           </div> 
           {props.error && <p className="error">{props.rootReducer.error}</p>}
